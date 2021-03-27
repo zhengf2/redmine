@@ -26,6 +26,22 @@ gem 'tzinfo-data', platforms: [:mingw, :x64_mingw, :mswin]
 gem 'rotp'
 gem 'rqrcode'
 
+gem 'twilio-ruby', '~> 5.10.3'
+gem 'switch_user', '~> 1.5.1'
+gem 'aws-sdk-s3'
+gem 'uk_postcode', '~> 2.1.0'
+gem 'postcodes_io', '~> 0.3.0'
+gem 'has_scope'
+gem 'acts_as_paranoid', '~> 0.6.0'
+
+gem 'bootstrap-datepicker-rails'
+gem 'dry-types', '~> 0.13.4'
+gem 'jquery-validation-rails', '~> 1.19.0'
+gem 'reform-rails'
+gem 'wicked'
+
+gem 'kaminari', '~> 1.1'
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem 'net-ldap', '~> 0.17.0'
@@ -59,7 +75,7 @@ if File.exist?(database_file)
     adapters.each do |adapter|
       case adapter
       when 'mysql2'
-        gem "mysql2", "~> 0.5.0", :platforms => [:mri, :mingw, :x64_mingw]
+        gem "mysql2", "~> 0.5.3", :platforms => [:mri, :mingw, :x64_mingw]
       when /postgresql/
         gem "pg", "~> 1.2.2", :platforms => [:mri, :mingw, :x64_mingw]
       when /sqlite3/
